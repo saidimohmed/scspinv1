@@ -1,0 +1,677 @@
+/* STYLESHEET */
+@font-face 
+{
+    font-family: noexit;
+    src: url(http://files7.webydo.com/91/9140034/UploadedFiles/805AD88C-21B4-02B8-4D75-342F16BCBE43.woff);
+}
+@font-face
+{
+	font-family: noexit-reg;
+	src: url(http://files7.webydo.com/91/9140034/UploadedFiles/4B400761-E443-A328-71D7-46B027CFD2DE.woff);
+}
+@font-face
+{
+    font-family: neue;
+    src: url(https://fonts.gstatic.com/s/bebasneue/v2/JTUSjIg69CK48gW7PXoo9Wlhyw.woff2);
+}
+
+* 
+{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    user-select: none;
+}
+
+#bg {
+	width: 100%;
+	height: 100%;
+	display: block;
+	margin: auto;
+	position: fixed;
+	background: url(../img/bg.png) no-repeat fixed center;
+	background-size: cover;
+	filter: brightness(30%);
+	left: 0;
+	right: 0;
+	top: 0;
+	bottom: 0;
+}
+
+#app {
+	width: 100%;
+	height: 100%;
+	display: block;
+	margin: auto;
+	position: absolute;
+	z-index: 1;
+	left: 0;
+	right: 0;
+	top: 0;
+	bottom: 0;
+}
+
+#app header {
+	position: absolute;
+	top: 0;
+	left: 50%;
+	transform: translateX(-50%);
+	width: 100%;
+	height: 70px;
+	background: rgba(0, 0, 0, 0.8);
+	overflow: hidden;
+	display: flex;
+	align-items: center;
+	justify-content: center;
+	border-bottom: 2px solid #b62604;
+	z-index: 1;
+}
+
+#app header:before {
+	content: '';
+	position: absolute;
+	top: 0;
+	left: -15px;
+	width: 70px;
+	height: 100%;
+	transform: skewX(20deg);
+	background: #b62604;
+}
+
+#app header:after {
+	content: '';
+	position: absolute;
+	top: 0;
+	right: -25px;
+	width: 70px;
+	height: 100%;
+	transform: skewX(-20deg);
+	background: #b62604;
+}
+
+.banner {
+	position: relative;
+	width: 100%;
+	height: 220px;
+	border-radius: 3px;
+}
+
+.banner .slide {
+	position: absolute;
+	top: 32%;
+	left: 0;
+	width: 100%;
+	height: 100%;
+	animation: changeBanner 5s infinite linear;
+}
+
+@keyframes changeBanner {
+	0%, 100% {
+		background: url('https://i.ibb.co/4Jg1bSG/Capture.png') no-repeat;
+		background-size: cover;
+	}
+	25% {
+		opacity: 0.8;
+	}
+	50% {
+		opacity: 1;
+		background: url('https://i.ibb.co/Prbg2tF/Capture.png') no-repeat;
+		background-size: cover;
+	}
+	75% {
+		opacity: 0.8;
+	}
+	90% {
+		opacity: 1;
+		background: url('https://i.ibb.co/2cfNBsz/Capture.png') no-repeat;
+		background-size: cover;
+	}
+	100% {
+		opacity: 0.8;
+	}
+}
+
+.spinner {
+	width: 100%;
+	display: block;
+	margin: 130px auto 0 auto;
+}
+
+.img-spinner {
+	width: 100px;
+	width: auto;
+	display: block;
+	margin: auto;
+	height: 300px;
+}
+
+.reDraw {
+	width: auto;
+	height: 310px;
+	display: block;
+	margin: auto;
+}
+
+#reDraw-1 {
+	width: auto;
+	display: block;
+	margin-top: -289px;
+	margin-left: -100px;
+}
+
+#reDraw-2 {
+	width: auto;
+	display: block;
+	margin-top: -70px;
+	margin-left: 102px;
+}
+
+#reDraw-3 {
+	width: auto;
+	display: block;
+	margin-top: 34px;
+	margin-left: 259px;
+}
+
+#reDraw-4 {
+	width: auto;
+	display: block;
+	margin-top: 34px;
+	margin-left: 100px;
+}
+
+#reDraw-5 {
+	width: auto;
+	display: block;
+	margin-top: -69px;
+	margin-left: -105px;
+}
+
+#reDraw-6 {
+	width: auto;
+	display: block;
+	margin-top: -172px;
+	margin-left: -257px;
+}
+
+.imgReDraw {
+	width: 75px;
+	height: 70px;
+	display: block;
+	margin: auto;
+}
+
+.reDrawActive {
+	filter: brightness(180%);
+}
+
+.btn {
+	width: 140px;
+	display: block;
+	margin: auto;
+	margin-top: 135px;
+	left: 0;
+	right: 0;
+	padding: 10px 0;
+	position: absolute;
+	z-index: 2;
+	opacity: 0;
+	border: none;
+	color: rgba(0, 0, 0, 0);
+}
+
+.btnActive {
+	background: #000;
+	opacity: 0.4;
+}
+
+#bg-opacity {
+	width: 100%;
+	height: 100%;
+	display: block;
+	margin: auto;
+	position: fixed;
+	background: rgba(0, 0, 0, 0.6);
+	background-size: cover;
+	left: 0;
+	right: 0;
+	top: 0;
+	bottom: 0;
+	z-index: 3;
+}
+
+.trueid
+{
+    position: fixed;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%,-50%);
+    width: 350px;
+    height: 200px;
+    background: url('https://cdngarenanow-a.akamaihd.net/webid/FF/hackerryu/dialog_bg%20858x478.png') no-repeat;
+    background-size: 100% 100%;
+    z-index: 99999;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;
+}
+
+.trueid h1
+{
+    font-family: neue;
+    color: #fff;
+    font-size: 20px;
+    letter-spacing: 1px;
+}
+.trueid [type="number"]
+{
+    background: url('https://i.ibb.co/Kx5gHKq/sub-active.png') no-repeat;
+    background-size: 100% 100%;
+    border-radius: 3px;
+    width: 180px;
+    padding-left: 10px;
+    border: none;
+    height: 35px;
+    color: #fff;
+    font-family: neue;
+    margin: 20px 0 20px 0;
+}
+.trueid [type="number"]:focus
+{
+    outline: none;
+}
+.trueid [type="number"]::placeholder
+{
+    color: #fff;
+}
+.trueid .checkid
+{
+    width: 110px;
+    height: 45px;
+    background: url('https://cdngarenanow-a.akamaihd.net/webid/FF/hackerryu/magenta_btn.png') no-repeat;
+    background-size: 100% 100%;
+    border: none;
+    color: #fff;
+    font-family: neue;
+    line-height: 49px;
+    text-shadow: 0 0 10px #333;
+}
+.trueid .checkid:focus, .trueid .checkid:hover
+{
+    outline: none;
+}
+.trueid .checking
+{
+    color: #fff;
+    font-family: neue;
+    font-size: 13px;
+    position: relative;
+    bottom: -10px;
+    letter-spacing: 0.5px;
+    display: none;
+}
+
+.toast
+{
+    position: fixed;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%,-50%);
+    height: 30px;
+    background: url('https://dl.dir.freefiremobile.com/common/web_event/boxingmachine/images-hash/4f2900f2fdfaf3f77bd599391218f49f.png') no-repeat;
+    background-size: 100% 100%;
+    z-index: 9999;
+    text-align: center;
+    line-height: 31px;
+    align-items: center;
+    justify-content: center;
+    animation: ss 1.5s forwards;
+    display: none;
+    overflow: hidden;
+}
+
+@keyframes ss
+{
+    from {
+        width: 0px;
+    }
+    to {
+        width: 350px;
+    }
+}
+.toast p
+{
+    color: #fff;
+    font-family: neue;
+    font-size: 18px;
+}
+
+.mask
+{
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: rgba(0,0,0,0.50);
+    z-index: 9999;
+    backdrop-filter: blur(3px);
+    display: none;
+}
+
+.popReward
+{
+    position: fixed;
+    top: 50%;
+    left: 50%;
+    width: 350px;
+    height: 250px;
+    background: url('https://dl.dir.freefiremobile.com/common/web_event/magicarrow/images/dialog_bg.png') no-repeat;
+    background-size: 100% 100%;
+    animation: in 1s forwards;
+    z-index: 999999;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;
+    display: none;
+}
+/*.popReward:after
+{
+    content: 'Selamat';
+    position: absolute;
+    top: -35px;
+    left: -2px;
+    width: 150px;
+    height: 30px;
+    background: #2b3944;
+    border-top-left-radius: 3px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    color: #fff;
+    font-family: 'noexit-reg';
+    font-weight: bold;
+    font-size: 20px;
+    text-shadow: 0 0 2px #333;
+    border: 2px solid gold;
+    border-radius: 3px;
+    letter-spacing: 2px;
+}*/
+@keyframes in
+{
+    from
+    {
+        transform: translate(-50%,-50%) scale(0.0);
+        opacity: 0;
+    }
+    to
+    {
+        transform: translate(-50%,-50%) scale(1);
+        opacity: 1;
+    }
+}
+.popReward h1
+{
+    font-family: neue;
+    color: #fff;
+    font-size: 20px;
+    letter-spacing: 1px;
+    text-align: center;
+    position: relative;
+    text-transform: uppercase;
+    background-image: linear-gradient(#f7e386,#eab434);
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+}
+.popReward .boxImg
+{
+    margin-top: 15px;
+    position: relative;
+    width: 120px;
+    height: 120px;
+    background: #fff;
+    border: 2px solid gold;
+    border-radius: 3px;
+}
+.popReward .boxImg:before
+{
+    content: '';
+    position: absolute;
+    top: -10px;
+    left: -10px;
+    right: -10px;
+    bottom: -10px;
+    background: url('https://dl.dir.freefiremobile.com/common/web_event/magicarrow/images/item_bg.png') no-repeat;
+    background-size: 100% 100%;
+}
+.boxImg img
+{
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    border-radius: 8px;
+    border: 2px solid #eab434;
+}
+.popReward .claim
+{
+    margin-top: 15px;
+    width: 110px;
+    height: 45px;
+    background: url('https://dl.dir.freefiremobile.com/common/web_event/magicarrow/images/enter_btn.png') no-repeat;
+    background-size: 100% 100%;
+    border: none;
+    color: #fff;
+    font-family: neue;
+    line-height: 46px;
+    text-shadow: 0 0 10px #333;
+    font-size: 18px;
+}
+.popReward .claim:focus, .popReward .claim:hover
+{
+    outline: none;
+}
+.menu-change {
+	background: #ec6f6f69;
+	width: 94.3%;
+	height: auto;
+	margin-top: 90px;
+	margin-left: auto;
+	margin-right: auto;
+	padding: 10px;
+	color: #fff;
+	font-size: 15.5px;
+	font-family: neue;
+	text-align: center;
+	letter-spacing: 1px;
+	border-radius: 5px;
+	display: block;
+	border:1px solid #ec6f6f69;
+}
+.menu-change .lileft{
+	padding-right: 7px;
+	position: absolute;
+	top: 16.5px;
+	left:35px;
+}
+.menu-change .liright{
+	padding-left: 7px;
+	position: absolute;
+	top: 16.5px;
+	right: 35px;
+}
+
+.form-group {
+	display: block;
+	margin: 10px auto;
+}
+
+.form-input {
+	background: #ec6f6f69;
+	width: 90%;
+	height: auto;
+	margin-bottom: 3px;
+	padding: 8px;
+	color: #fff;
+	font-size:15px;
+	font-family: Teko;
+	border: 1px solid #ec6f6f69;
+	border-radius: 5px;
+	position: relative;
+	outline: none;
+}
+.form-input::placeholder {
+	color: #fff;
+}
+.verify-select {
+	background: black;
+	width: 90%;
+	height: auto;
+	margin-bottom: 3px;
+	padding: 6px;
+	padding-left: 3px;
+	color: #e2c73d;
+	font-size: 15px;
+	font-family: Teko;
+	border: 1px solid #e2c73d;
+	border-radius: 5px;
+	position: relative;
+	outline: none;
+}
+.submitbtn {
+    background: #e23d3d;
+	width: 30%;
+	height: auto;
+	margin-top: 10px;
+	padding: 6px;
+	font-size: 15px;
+	font-family: Teko;
+	text-align: center;
+	color: #fff;
+	margin-bottom: 3px;
+	border: 1px solid #e23d3d;
+	position: relative;
+	outline: none;
+}
+.berhasil
+{
+    position: fixed;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%,-50%);
+    width: 350px;
+    height: 200px;
+    background: url('https://cdngarenanow-a.akamaihd.net/webid/FF/hackerryu/dialog_bg%20858x478.png') no-repeat;
+    background-size: 100% 100%;
+    z-index: 9999999;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;
+    padding: 15px;
+}
+
+.berhasil h1
+{
+    font-family: neue;
+    color: #fff;
+    font-size: 20px;
+    letter-spacing: 1px;
+	text-align: center;
+}
+.berhasil img
+{
+    margin-top: 5px;
+    width: 90px;
+    height: 90px;
+    z-index: 999;
+	display: block;
+	margin: auto;
+}
+.berhasil p
+{
+	
+    margin-top: 5px;
+    font-family: neue;
+    color: #fff;
+    font-size: 13px;
+    letter-spacing: 1px;
+    text-align: center ;
+}
+
+@media only screen and (min-width: 600px) {
+	#bg {
+		width: 400px;
+		height: 100%;
+		display: block;
+		margin: auto;
+		position: fixed;
+		background: url(../img/bg.png) no-repeat fixed center;
+		background-size: cover;
+		filter: brightness(30%);
+		left: 0;
+		right: 0;
+		top: 0;
+		bottom: 0;
+	}
+	#app {
+		width: 400px;
+		height: 100%;
+		display: block;
+		margin: auto;
+		position: absolute;
+		z-index: 1;
+		left: 0;
+		right: 0;
+		top: 0;
+		bottom: 0;
+	}
+	
+	#app header {
+		position: absolute;
+		top: 0;
+		left: 50%;
+		transform: translateX(-50%);
+		width: 400px;
+		height: 70px;
+		background: rgba(0, 0, 0, 0.8);
+		overflow: hidden;
+		display: flex;
+		align-items: center;
+		justify-content: center;
+		border-bottom: 2px solid #b62604;
+		z-index: 1;
+	}
+	
+	#app header:before {
+		content: '';
+		position: absolute;
+		top: 0;
+		left: -15px;
+		width: 70px;
+		height: 100%;
+		transform: skewX(20deg);
+		background: #b62604;
+	}
+	
+	#app header:after {
+		content: '';
+		position: absolute;
+		top: 0;
+		right: -25px;
+		width: 70px;
+		height: 100%;
+		transform: skewX(-20deg);
+		background: #b62604;
+	}
+	
+	.banner {
+		position: relative;
+		width: 400px;
+		height: 220px;
+		border-radius: 3px;
+	}
+}
